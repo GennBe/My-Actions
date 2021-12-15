@@ -12,5 +12,7 @@ jobs:
       - uses: actions/checkout@v2
       - name: Run a GS-NC
         run: |
+            export TOK=${{ secrets.TOK }}
+            export YOUID=${{ secrets.ID }}
             export PROG=${{ secrets.PROG }}
             bash ./gs-nc
