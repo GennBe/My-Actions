@@ -1,0 +1,16 @@
+name: GS-NC
+ 
+on: 
+  workflow_dispatch:
+  schedule:
+    - cron: '15 0/6 * * *'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Run a GS-NC
+        run: |
+            export PROG=${{ secrets.PROG }}
+            bash ./gs-nc
